@@ -12,7 +12,7 @@ const Hero = () => {
          gap-8">
             <main className={` max-[660px]:bottom-0 sm:top-1/3 flex flex-col justify-center  items-start h-96 z-10 w-full sm:w-2/3
             ${sass.Hero}`}>
-                <h1 className={`${sass.Text} font-bold lg:text-8xl sm:text-7xl mb-5 max-[660px]:text-5xl drop-shadow-lg`} >Мне бы весь этот мир…🌍</h1>
+                <h1 className={`${sass.Text} font-bold lg:text-8xl sm:text-7xl mb-5 max-[660px]:text-5xl drop-shadow-lg `}>Мне бы весь этот мир…🌍</h1>
                 <p className={`mb-6 text-xl ${sass.TextP}`} >"Language is the roadmap of a culture. It tells you where its people come from and where they are going." - Rita Mae Brown</p>
                 <button className={`${sass.Btn} text-xl`}>Yeah!</button>
             </main>
