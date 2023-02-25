@@ -1,7 +1,7 @@
 import sass from "@/next-app/styles/Home.module.scss"
 const Header = () => {
     return (
-        <main className="Main flex max-[660px]:flex-wrap justify-center items-center gap-4 sm:justify-between max-[660px]:flex-col h-24 overflow-hidden  w-full" style={{transition: "all 330ms"}} >
+        <main className="Main flex max-[660px]:flex-wrap justify-center items-center gap-4 sm:justify-between max-[660px]:flex-col h-24 overflow-hidden  w-full">
             <div className="TopLvl flex items-center justify-between gap-3 w-full">
                 <div className="Logo flex items-center justify-between gap-3">
                     <img src="/logo.svg" alt="" />
@@ -25,6 +25,7 @@ const Header = () => {
                         <h6 className={`sm:hidden ${sass.Text} text-2xl`}>Telegram</h6>
                     </a>
                 </li>
+            
             </ul>
         </main>
     )

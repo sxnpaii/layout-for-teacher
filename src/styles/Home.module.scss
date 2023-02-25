@@ -10,16 +10,61 @@
 .Hero {
     max-width: 777px;
 
-    .Text {
-        @include sassDef-s.Text($font: sassDef-s.$Philosopher);
+    @media (max-width:660px) {
+        position: absolute;
     }
 
-    .Btn {
-        @include sassDef-s.Btn();
+    .Text {
+        @include sassDef-s.Text($font: sassDef-s.$Philosopher);
+        animation: scale 1s cubic-bezier(0.66, 0.02, 0.28, 0.74);
+
+        @keyframes scale {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
     }
+
+
 
     .TextP {
         @include sassDef-s.Text();
+        animation: scale 1.2s cubic-bezier(0.66, 0.02, 0.28, 0.74);
+
+        @keyframes scale {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.Btn {
+    @include sassDef-s.Btn();
+    animation: scale 1.5s cubic-bezier(0.66, 0.02, 0.28, 0.74);
+
+    @keyframes scale {
+        from {
+            transform: translateY(50px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
     }
 }
 
@@ -27,6 +72,25 @@
     width: 100%;
     max-width: 620.86px;
     border-radius: 73% 27% 75% 25% / 77% 24% 76% 23%;
+    animation: rotate 1s cubic-bezier(0.66, 0.02, 0.28, 0.74);
+    transition: 1s cubic-bezier(0.66, 0.02, 0.28, 0.74);
+
+    @keyframes rotate {
+
+        from {
+            border-radius: 26% 74% 22% 78% / 22% 78% 22% 78%;
+            opacity: 0;
+        }
+
+        to {
+            border-radius: 73% 27% 75% 25% / 77% 24% 76% 23%;
+            opacity: 1;
+        }
+    }
+
+    &:hover {
+        border-radius: 26% 74% 22% 78% / 22% 78% 22% 78%;
+    }
 
     @media (max-width:660px) {
         max-width: 420px;
