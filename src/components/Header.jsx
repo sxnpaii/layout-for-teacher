@@ -25,18 +25,6 @@ const Header = () => {
                         <h6 className={`sm:hidden ${sass.Text} text-2xl`}>Telegram</h6>
                     </a>
                 </li>
-                <li className="">
-                    <a href="" className=" flex items-center gap-3">
-                        <i className="ri ri-behance-line sm:text-4xl text-3xl "></i>
-                        <h6 className={`sm:hidden ${sass.Text} text-2xl`}>Behance</h6>
-                    </a>
-                </li>
-                <li className="">
-                    <a href="" className=" flex items-center gap-3">
-                        <i className="ri ri-linkedin-line sm:text-4xl  text-3xl"></i>
-                        <h6 className={`sm:hidden ${sass.Text} text-2xl`}>Linkedin</h6>
-                    </a>
-                </li>
             </ul>
         </main>
     )
