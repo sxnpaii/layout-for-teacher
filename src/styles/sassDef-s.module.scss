@@ -1,0 +1,22 @@
+$defBlack: #161616;
+$BgClr: #F4F5F9;
+$textClr: #343434;
+$Grotesque: 'Darker Grotesque', sans-serif;
+$Philosopher: 'Philosopher', sans-serif;
+
+@mixin Text($font: $Grotesque, $clr: $defBlack) {
+    font-family: $font;
+    color: $clr;
+}
+
+@mixin Btn($txtClr: $defBlack) {
+    background: #222222;
+    border-radius: 8px;
+    padding: 16px 40px;
+    @include Text($clr: $BgClr);
+
+    &:hover {
+        color: #4E7175;
+    }
+}
+

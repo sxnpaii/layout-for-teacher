@@ -1,0 +1,39 @@
+@use "../styles/sassDef-s.module.scss";
+// header
+
+.Text {
+    @include sassDef-s.Text();
+}
+
+
+// hero
+.Hero {
+    max-width: 777px;
+
+    .Text {
+        @include sassDef-s.Text($font: sassDef-s.$Philosopher);
+    }
+
+    .Btn {
+        @include sassDef-s.Btn();
+    }
+
+    .TextP {
+        @include sassDef-s.Text();
+    }
+}
+
+.img {
+    width: 100%;
+    max-width: 620.86px;
+    border-radius: 73% 27% 75% 25% / 77% 24% 76% 23%;
+
+    @media (max-width:660px) {
+        max-width: 420px;
+    }
+
+    @media (max-width:1240px) {
+        max-width: 480px;
+    }
+
+}

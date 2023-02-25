@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700&family=Philosopher:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background: url("../../public/уддшзыу.svg") no-repeat top left / cover;
+    height: 100vh;
+}
