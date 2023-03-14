@@ -10,10 +10,11 @@ $Philosopher: 'Philosopher', sans-serif;
 }
 
 @mixin Btn($txtClr: $defBlack) {
-    background: #222222;
+    background: $txtClr;
     border-radius: 8px;
     padding: 16px 40px;
     @include Text($clr: $BgClr);
+    text-align: center;
 
     &:hover {
         color: #4E7175;

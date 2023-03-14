@@ -1,0 +1,37 @@
+@use "../../sassDef-s.module.scss";
+
+.Main {
+    .Heading {
+        @include sassDef-s.Text($font: sassDef-s.$Philosopher);
+
+    }
+
+    .RecentPosts {
+        min-height: 250px;
+        flex-wrap: wrap;
+        .col{
+            .post {
+                border: 2px solid sassDef-s.$defBlack;
+                border-radius: 20px;
+    
+                .postHead {
+                    @include sassDef-s.Text();
+                    font-weight: 700;
+                }
+    
+                .postBody {
+                    @include sassDef-s.Text();
+                }
+    
+            }
+
+        }
+
+    }
+
+    .Btn {
+        display: block;
+        width: 230px;
+        @include sassDef-s.Btn();
+    }
+}

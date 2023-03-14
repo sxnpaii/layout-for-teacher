@@ -1,0 +1,10 @@
+@use "../sassDef-s.module.scss";
+// header
+
+.Text {
+    @include sassDef-s.Text();
+}
+
+.mainHero{
+    background: url("../../../public/bg_ellipse.svg") no-repeat top left / cover;
+}

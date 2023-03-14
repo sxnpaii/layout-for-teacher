@@ -1,0 +1,12 @@
+@use "../sassDef-s.module.scss";
+
+.Main {
+    .Heading {
+        @include sassDef-s.Text();
+
+    }
+
+    .Socials {
+        opacity: .7;
+    }
+}

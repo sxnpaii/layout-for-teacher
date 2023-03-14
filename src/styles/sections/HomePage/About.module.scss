@@ -1,0 +1,34 @@
+@use "../../sassDef-s.module.scss";
+
+.About {
+    width: 90%;
+
+    .media {
+
+        img {
+            border-radius: 100px;
+        }
+    }
+
+    .textBlock {
+        width: 50%;
+
+        @media not all and (min-width:1024px) {
+            width: 100%;
+        }
+
+        .Head {
+            @include sassDef-s.Text($font: sassDef-s.$Philosopher);
+        }
+
+        .Text {
+            @include sassDef-s.Text();
+        }
+        .Btn{
+            @include sassDef-s.Btn();
+            display: block;
+            width: 180px;
+            text-align: center;
+        }
+    }
+}
