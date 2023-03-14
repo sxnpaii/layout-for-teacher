@@ -26,8 +26,8 @@ const images = [
 const Gallery = () => {
     return (
         <main className={`${sass.Main} columns-1 sm:columns-2 md:columns-3 gap-5 items-start`}>
-            {images.map(path => (
-                <img src={path} alt="" className="block w-full my-5 scale-95 hover:scale-100 transition content-start break-inside-avoid" data-aos="zoom-in" data-aos-duration={400} />
+            {images.map((path, index)=> (
+                <img src={path} key={path} alt="" className="block w-full my-5 scale-95 hover:scale-100 transition content-start break-inside-avoid" data-aos="zoom-in" data-aos-duration={400} />
             ))}
 
         </main>
