@@ -16,6 +16,9 @@ import MainLayout from '../components/MainLayout';
 export const getServerSideProps = async () => {
   const resp = await fetch(`${process.env.LOCAL_API}/handler`);
   const data = await resp.json();
+  if (!data) {
+    return <h1>Loading...</h1>
+  }
   return {
     props: {
       posts: data

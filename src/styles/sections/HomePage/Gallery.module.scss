@@ -4,7 +4,12 @@
     max-width: 1520px;
     margin: auto;
 
+    @media not all and (max-width:660px) {
+        width: 100%;
+    }
+
     .Img {
-        filter:contrast(1.2);
+        filter: contrast(1.2);
+        border-radius: 7px;
     }
 }
