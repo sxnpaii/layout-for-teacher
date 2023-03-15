@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   env: {
-    LOCAL_API: `http://localhost:3000/api`
+    LOCAL_API: "http://localhost:3000"
   }
 }
 

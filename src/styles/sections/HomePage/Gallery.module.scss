@@ -3,4 +3,8 @@
 .Main {
     max-width: 1520px;
     margin: auto;
+
+    .Img {
+        filter:contrast(1.2);
+    }
 }

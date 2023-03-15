@@ -13,17 +13,17 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import MainLayout from '../components/MainLayout';
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const resp = await fetch(`${process.env.LOCAL_API}/handler`);
   const data = await resp.json();
   return {
     props: {
-      data: data
+      posts: data
     }
   }
 }
 
-export default function Home({ data }) {
+export default function Home({ posts }) {
   // aos 
   useEffect(() => {
     AOS.init({
@@ -66,7 +66,7 @@ export default function Home({ data }) {
           <Gallery />
         </section>
         <section>
-          <Blogs data={data} />
+          <Blogs data={posts} />
         </section>
       </MainLayout>
     </>
