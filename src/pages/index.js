@@ -14,7 +14,7 @@ import "aos/dist/aos.css";
 import MainLayout from '../components/MainLayout';
 
 export const getServerSideProps = async () => {
-  const resp = await fetch(`${process.env.LOCAL_API}/handler`);
+  const resp = await fetch(`${process.env.LOCAL_API}/api/handler`);
   const data = await resp.json();
   return {
     props: {
