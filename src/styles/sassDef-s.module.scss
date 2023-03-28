@@ -21,3 +21,7 @@ $Philosopher: 'Philosopher', sans-serif;
     }
 }
 
+@mixin Border() {
+    border: 2px solid $defBlack;
+    border-radius: 20px;
+}

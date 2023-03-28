@@ -1,5 +1,9 @@
+// react hooks
+import { useState, useEffect } from "react";
+// styles 
 import sass from "@/next-app/styles/sections/HomePage/Gallery.module.scss";
-// data
+
+
 const images = [
     `/img/img (20).jpg`,
     `/img/img (2).jpg`,
@@ -24,9 +28,18 @@ const images = [
 
 
 const Gallery = () => {
+    const [imgData, setImgData] = useState();
+    useEffect(() => {
+        const fetchedImg = async () => {
+            const res = await fetch(`/api/imgHandler`);
+            const img = await res.json();
+            setImgData(img);
+        }
+        fetchedImg();
+    }, [])
     return (
         <main className={`${sass.Main} columns-2 md:columns-3 sm:gap-5 items-start`}>
-            {images.map((path, index) => (
+            {imgData?.map((path) => (
                 <img src={path} key={path} alt="" className={`${sass.Img} block w-full my-3 sm:my-5  hover:scale-100 transition content-start break-inside-avoid`} data-aos="zoom-in" data-aos-duration={400} />
             ))}
         </main>

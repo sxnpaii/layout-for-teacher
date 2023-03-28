@@ -9,4 +9,7 @@
     .Socials {
         opacity: .7;
     }
+    .WaterMark{
+        @include sassDef-s.Text($font: sassDef-s.$Philosopher);
+    }
 }

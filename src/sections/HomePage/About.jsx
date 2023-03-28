@@ -1,4 +1,6 @@
 import sass from "@/next-app/styles/sections/HomePage/About.module.scss";
+// cv
+// import cv from ""
 
 const About = () => {
     return (
@@ -12,7 +14,7 @@ const About = () => {
                     <br />
                     <br />
                     So back to myself, I am alumni of Uzbekistan State World Languages University, and graduated from the sphere of translation. During my study years , I acquired English, and Russian a little bit.  Meanwhile, I worked as a sales and PR manager for a private agency which offers design services. So I have 2 years of working experience as a manager...   </p>
-                <a href="" data-aos="fade-up" data-aos-duration="1500" className={`${sass.Btn}`} >Download CV</a>
+                <a href="/cv.pdf" data-aos="fade-up" data-aos-duration="1500" className={`${sass.Btn}`} >Download CV</a>
             </div>
 
         </main>

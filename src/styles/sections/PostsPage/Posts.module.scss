@@ -1,0 +1,28 @@
+@use "../../sassDef-s.module.scss";
+
+.AllPosts {
+    .Post {
+        border: 2px solid sassDef-s.$defBlack;
+        border-radius: 20px;
+        transition: 230ms cubic-bezier(0.19, 1, 0.22, 1);
+
+        &:hover {
+            box-shadow: 0 0 7px 5px #77777776;
+        }
+
+        .Head {
+            @include sassDef-s.Text($font: sassDef-s.$Philosopher);
+        }
+
+        .Content {
+            @include sassDef-s.Text()
+        }
+
+        .Tags {
+            background: #77777776;
+            @include sassDef-s.Text($clr: white);
+            border-radius: 10px;
+        }
+    }
+
+}

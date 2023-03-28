@@ -1,0 +1,19 @@
+@use "../../sassDef-s.module.scss";
+
+.Post {
+    .Heading {
+        @include sassDef-s.Text($font: sassDef-s.$Philosopher)
+    }
+
+    .Content {
+        @include sassDef-s.Text();
+    }
+    .Tags{
+        @include sassDef-s.Text();
+        .Tag{
+            background: #77777776;
+            @include sassDef-s.Text($clr: white);
+            border-radius: 10px;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@use "../../sassDef-s.module.scss";
+
+
+.Heading {
+    @include sassDef-s.Text($font: sassDef-s.$Philosopher)
+}
+
+.Form {
+    .SettingTitle {
+        @include sassDef-s.Border();
+        @include sassDef-s.Text($font: sassDef-s.$Philosopher)
+    }
+
+    .SettingContent {
+        @include sassDef-s.Border();
+        @include sassDef-s.Text();
+    }
+
+    .SettingTags {
+        @include sassDef-s.Border();
+        @include sassDef-s.Text();
+    }
+
+    .SubmitBtn {
+        @include sassDef-s.Btn()
+    }
+}
+
+.PostPreview {}

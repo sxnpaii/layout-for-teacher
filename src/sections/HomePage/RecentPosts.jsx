@@ -9,13 +9,13 @@ const Blogs = ({ data }) => {
             <div className={`${sass.RecentPosts} flex flex-col items-center mb-8 `}>
                 <div className={`${sass.col} grid sm:grid-cols-2 md:grid-cols-4 gap-5 mb-10 w-full`}>
                     {
-                        data.posts.reverse().filter(post => post.id < 5).map(({ id, title, content, date }) => (
+                        data.reverse().filter(post => post.id < 5).map(({ id, title, content, date }) => (
                             <Link href={`posts/${id}`} key={id} className={`${sass.post} p-3 w-full`} data-aos="fade-up">
                                 <div className={`${sass.postHead} flex justify-between flex-wrap lg:flex-nowrap `} >
                                     <h4 className={`${sass.postTitle} text-2xl`}>{title}</h4>
-                                    <b className={`${sass.publishedDate}`}>{date}</b>
+                                    <b className={`${sass.publishedDate}`}>{date.day}.{date.month}.{date.year}</b>
                                 </div>
-                                <p className={`${sass.postBody} text-lg`}>{content}</p>
+                                <p className={`${sass.postBody} text-lg`}>{content.substr(0, 150)}...</p>
                             </Link>
                         ))
                     }

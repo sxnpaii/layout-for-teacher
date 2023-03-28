@@ -6,14 +6,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "backend": "json-server -w src/pages/api/db.json -p 3001 --routes routes.json",
+    "serve": "concurrently \"npm run dev\" \"npm run backend\""
   },
   "dependencies": {
     "aos": "^2.3.4",
-    "bricks.js": "^1.8.0",
+    "concurrently": "^7.6.0",
+    "dotenv": "^16.0.3",
     "next": "13.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "remarkable": "^2.0.1",
     "sass": "^1.58.3"
   },
   "devDependencies": {
