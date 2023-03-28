@@ -1,17 +1,18 @@
 // ?next modules
 import Head from "next/head";
 import Link from "next/link";
+//ky
+import ky from "ky";
 // ?components
 import MainLayout from "@/next-app/components/MainLayout";
 // ?styles
 import sass from "@/next-app/styles/sections/PostsPage/Posts.module.scss";
 // !data fetching
 export const getServerSideProps = async () => {
-    const response = await fetch(`${process.env.LOCAL_API}/posts`)
-    const data = await response.json()
+    const response = await ky.get(`${process.env.NEXT_PUBLIC_LOCAL_API}/api/posts`).json();
     return {
         props: {
-            Posts: data
+            Posts: response
         }
     }
 }

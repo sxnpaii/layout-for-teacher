@@ -1,5 +1,6 @@
 // next modules
 import Head from "next/head";
+import ky from "ky";
 // ?components
 import MainLayout from "@/next-app/components/MainLayout";
 import MarkdownFormatter from "@/next-app/components/MarkdownFormatter";
@@ -7,11 +8,10 @@ import MarkdownFormatter from "@/next-app/components/MarkdownFormatter";
 import sass from "@/next-app/styles/sections/PostsPage/Post.module.scss"
 // !data fetching
 export const getServerSideProps = async (context) => {
-  const response = await fetch(`${process.env.LOCAL_API}/posts/${context.query.id}`)
-  const data = await response.json()
+  const response = await ky.get(`${process.env.LOCAL_API}/posts/${context.query.id}`).json();
   return {
     props: {
-      data
+      response
     }
   }
 

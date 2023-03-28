@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import { useEffect } from 'react';
+// ky
+import ky from 'ky';
 // styles
 import hero from "@/next-app/styles/sections/HomePage/Hero.module.scss";
 // components
@@ -11,11 +13,10 @@ import Blogs from '../sections/HomePage/RecentPosts';
 
 
 export const getServerSideProps = async () => {
-  const resp = await fetch(`${process.env.LOCAL_API}/posts`);
-  const data = await resp.json();
+  const resp = await ky.get(`${process.env.NEXT_PUBLIC_LOCAL_API}/api/posts`).json()
   return {
     props: {
-      posts: data
+      posts: resp
     }
   }
 }
