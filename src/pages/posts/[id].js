@@ -8,10 +8,15 @@ import MarkdownFormatter from "@/next-app/components/MarkdownFormatter";
 import sass from "@/next-app/styles/sections/PostsPage/Post.module.scss"
 // !data fetching
 export const getServerSideProps = async (context) => {
-  const response = await ky.get(`${process.env.LOCAL_API}/posts/${context.query.id}`).json();
+  const response = await ky.get(`${process.env.NEXT_PUBLIC_LOCAL_API}/api/posts/${context.query.id}`).json();
+  if (!response) {
+    return{
+      notFound: true,
+    }
+  }
   return {
     props: {
-      response
+      data: response
     }
   }
 
@@ -26,9 +31,12 @@ const Post = ({ data }) => {
         </title>
       </Head>
       <div className={`${sass.Post} w-[90%] m-auto`}>
-        <h3 className={`${sass.Heading} text-4xl mb-8`}>
+        <h3 className={`${sass.Heading} text-4xl mb-5`}>
           {data.title}
         </h3>
+        <h6 className={`${sass.Description} text-2xl font-medium`}>{data.description}</h6>
+        <hr className="my-8" />
+
         <div className={`${sass.Content} text-2xl mb-20`}>
           <MarkdownFormatter markdown={data.content} />
         </div>

@@ -4,6 +4,9 @@
     .Heading {
         @include sassDef-s.Text($font: sassDef-s.$Philosopher)
     }
+    .Description{
+        @include sassDef-s.Text()
+    }
 
     .Content {
         @include sassDef-s.Text();

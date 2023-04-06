@@ -13,6 +13,9 @@
         .Head {
             @include sassDef-s.Text($font: sassDef-s.$Philosopher);
         }
+        .date{
+            @include sassDef-s.Text()
+        }
 
         .Content {
             @include sassDef-s.Text()
@@ -25,4 +28,7 @@
         }
     }
 
+    .NotFound {
+        @include sassDef-s.Text();
+    }
 }

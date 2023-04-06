@@ -21,7 +21,8 @@ export const getServerSideProps = async () => {
   }
 }
 
-export default function Home({ posts }) {
+
+export default function Home({posts}) {
   return (
     <>
       <Head>
@@ -41,7 +42,7 @@ export default function Home({ posts }) {
           <Gallery />
         </section>
         <section>
-          <Blogs data={posts} />
+          <Blogs posts={posts} />
         </section>
       </MainLayout>
     </>

@@ -15,8 +15,7 @@
                 border-radius: 20px;
     
                 .postHead {
-                    @include sassDef-s.Text();
-                    font-weight: 700;
+                    @include sassDef-s.Text($font: sassDef-s.$Philosopher);
                 }
     
                 .postBody {

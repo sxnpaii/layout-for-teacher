@@ -2,9 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   env: {
-    NEXT_PUBLIC_LOCAL_API: 'http://localhost:3001'
+    NEXT_PUBLIC_LOCAL_API: 'https://server-its-d1a.onrender.com',
   }
 
 }
 
-module.exports = nextConfig
+module.exports = nextConfig;

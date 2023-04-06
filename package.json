@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "backend": "json-server -w src/pages/api/db.json -p 3001 --routes routes.json",
-    "serve": "concurrently \"npm run dev\" \"npm run backend\""
+    "backend": "json-server -w src/pages/api/db.json -p 3001  --routes routes.json",
+    "serve": "concurrently \"npm run dev\" \"node server.js\""
   },
   "dependencies": {
     "aos": "^2.3.4",
