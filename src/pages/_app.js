@@ -8,7 +8,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function App({ Component, pageProps }) {
-  // aos
+
+  //initialize aos for project 
   useEffect(() => {
     AOS.init({
       disable: false,

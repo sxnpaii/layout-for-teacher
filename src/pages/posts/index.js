@@ -24,7 +24,7 @@ export default function Posts({ Posts }) {
                 <title>All Posts || D1a's Blog 💙</title>
             </Head>
             <div className={`${sass.AllPosts} max-w-[1720px] m-auto`}>
-                {Posts.length !== 0 ? Posts.map(({ id, title, content, date, tags }) => (
+                {Posts.length !== 0 ? Posts.map(({ id, title, description, date, tags }) => (
                     <Link href={`/posts/${id}`} className={`${sass.Post} block p-5 m-5 `} key={id} data-aos="fade-up">
                         <div className="heading flex flex-wrap-reverse sm:flex-nowrap justify-between items-center gap-5 sm:max-h-[30px] ">
                             <h3 className={`${sass.Head} text-3xl mb-3`}>{title}</h3>
@@ -32,7 +32,8 @@ export default function Posts({ Posts }) {
                                 published:<b> {date.day}.{date.month}.{date.year}</b>
                             </div>
                         </div>
-                        <p className={`${sass.Content} text-lg mb-10 break-words`}>{content.substring(0, 400)}...</p>
+                        <p className={`${sass.Content} text-lg mb-10 break-words`}>{description}
+                        </p>
                         <div >
                             {tags.map((tag, index) => (
                                 <b key={index + 1} href={`tags/${tag}`} className={`${sass.Tags} py-1 px-2 m-1 text-sm`} >{tag}
@@ -41,8 +42,8 @@ export default function Posts({ Posts }) {
                         </div>
                     </Link>
                 ))
-                    : <h3 className={`${sass.NotFound}`}>There is nothing here yet...</h3>
-            }
+                    : <h3 className={`${sass.NotFound} text-center text-3xl my-[30vh]`}>There is nothing here yet...</h3>
+                }
             </div>
         </MainLayout>
     )

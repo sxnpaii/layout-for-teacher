@@ -9,21 +9,25 @@
     .RecentPosts {
         min-height: 250px;
         flex-wrap: wrap;
-        .col{
+
+        .col {
             .post {
                 border: 2px solid sassDef-s.$defBlack;
                 border-radius: 20px;
-    
+
                 .postHead {
                     @include sassDef-s.Text($font: sassDef-s.$Philosopher);
                 }
-    
+
                 .postBody {
                     @include sassDef-s.Text();
                 }
-    
+
             }
 
+            .NotFound {
+                @include sassDef-s.Text();
+            }
         }
 
     }

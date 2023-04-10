@@ -10,8 +10,8 @@ import sass from "@/next-app/styles/sections/PostsPage/Post.module.scss"
 export const getServerSideProps = async (context) => {
   const response = await ky.get(`${process.env.NEXT_PUBLIC_LOCAL_API}/api/posts/${context.query.id}`).json();
   if (!response) {
-    return{
-      notFound: true,
+    return {
+      notFound: true
     }
   }
   return {
@@ -30,6 +30,7 @@ const Post = ({ data }) => {
           {data.title} || D1a's Blog 💙
         </title>
       </Head>
+
       <div className={`${sass.Post} w-[90%] m-auto`}>
         <h3 className={`${sass.Heading} text-4xl mb-5`}>
           {data.title}

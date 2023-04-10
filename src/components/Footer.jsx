@@ -13,7 +13,7 @@ const Footer = () => {
             </div>
             <hr />
             <div className="flex justify-center items-center">
-                <h6 className={`${sass.WaterMark} opacity-75 my-2 text-[14px]`}> Created & Designed with❤️ by <a href="https://sxnpaii.github.io">Sxnpaii...</a></h6>
+                <h6 className={`${sass.WaterMark} opacity-75 my-2 text-[14px]`}> Created & Designed with❤️ by <a href="https://t.me/khurshid_0625">Sxnpaii...</a></h6>
             </div>
         </main>
     )

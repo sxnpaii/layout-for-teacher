@@ -13,6 +13,7 @@
 
     .SettingContent {
         @include sassDef-s.Border();
+        border-radius: 20px 20px 0px 20px;
         @include sassDef-s.Text();
     }
 
@@ -22,8 +23,13 @@
     }
 
     .SubmitBtn {
-        @include sassDef-s.Btn()
+        @include sassDef-s.Btn();
+    }
+    .Text{
+        @include sassDef-s.Text();
     }
 }
+
+
 
 // .PostPreview {}
